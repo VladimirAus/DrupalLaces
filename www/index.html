@@ -19,10 +19,12 @@
           <span class="done-{{todo.done}}">{{todo.text}}</span>
         </li>
       </ul>
-      <form ng-submit="todoList.addTodo()">
-        <input type="text" ng-model="todoList.todoText"  size="30"
-               placeholder="add new todo here">
-        <input class="btn-primary" type="submit" value="add">
+      <form>
+        <input type="text" size="30" 
+          class="form-component"
+          placeholder="add new todo here"
+          ng-model="todoList.todoText" />
+        <button class="btn btn-primary" ng-click="todoList.addTodo()">Add</button>
       </form>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
